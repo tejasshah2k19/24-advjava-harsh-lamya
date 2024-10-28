@@ -1,0 +1,159 @@
+webapp -> server -> webserver ->
+
+
+Servlet -> interface 
+GenericServlet -> abstract class -> 
+HttpServlet -> non abstract class 
+
+class extends HttpServlet 
+
+
+how to create servlet ?
+
+1) class extends HttpServlet
+2) override service method with request and response 
+3) @WebServlet utl mapping 
+
+@WebServlet("/a") -> urlPattern -> action  , direct browser hit 
+
+---------------------------------------------------------------------
+
+how to read form data ?
+using request.getParameter(); 
+
+---------------------------------------------------------------------
+
+
+input -> process{validation} ->
+ 
+
+ jsp -> html + java --->
+ 
+ by default-> html 
+ 
+ java -> 
+ 	<%	%> -> scriptlet -> java code 
+ 	<%! %> -> declaration -> declare
+ 	<%= %> -> expression -> java print 
+ 	
+----------------------------------------------------------- 
+ how to navigate on other page from servlet ? 
+	using RequestDispatcher ->		
+ 
+ 	RequestDispatcher rd = request.getRequestDispatcher("CalcResult.jsp");
+ 	rd.forward(request,response); 
+-------------------------------------------------------------
+
+	CGI
+	
+	request -> object 
+	request -> object 
+	request -> object 
+	
+	500 Login  -> 500 object -> memory allocation - release memory 
+	
+	
+	Servlet ->
+	single object created '
+	1	-> check -> object create -> response 
+	2
+	
+	500 request -> 1 object -> 500 response 
+	thread -> 
+	
+	servlet life cycle -> 
+	
+	1)load class -> 1 time 
+	2)create instance -> 1 time 
+	3)init()-> 1 time 
+	4)service()-> n time
+	5)destroy() -> 1 time {shutdown server}  
+-------------------------------------------------------------------------------
+
+LifeCycleServlet 
+	init 
+		init
+	service
+		service 
+	destroy 
+		destroy 
+		
+	
+<a href="LifeCycleServlet">LifeCycleServlet</A>		
+	
+
+-------------------------------------------------------------------------------
+
+Filter -> pre Process 
+		
+			encryption 
+			validation 
+			security -> token , authToken , ip , geo-location 
+		
+we never directly call filter ->
+	filter always invoke when we call servlet 
+	we will map filter with servlet 
+		
+	
+			
+how to create filter ?
+1) class implements Filter interface 
+2) override method - logic - 
+	init() 
+	doFilter() --> logic 
+	destroy()
+3) mapping -> @WebFilter 
+
+			
+we will create separate folder for filter -> 
+
+-------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
