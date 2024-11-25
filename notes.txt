@@ -109,7 +109,14 @@ we will create separate folder for filter ->
 
 -------------------------------------------------------------------------------
 
+ServletConfig -> web.xml -> servlet configuration -> email - password 
 
+
+email - password : file
+
+1) credentials -> particular servlet -> 
+
+email - password :submit => Servlet => File  
 
 
 
